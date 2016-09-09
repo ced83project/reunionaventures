@@ -41,11 +41,26 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
   font-weight: 700;
 }
+.black {
+  font-weight: 900;
+}
+.bold {
+  font-weight: 700;
+}
+.medium {
+  font-weight: 400;
+}
+.regular {
+  font-weight: 400;
+}
 .light {
+  font-weight: 300;
+}
+.thin {
   font-weight: 100;
 }
 .img-centered {
@@ -61,7 +76,7 @@ h6 {
   color: white;
   background-color: #FF9800;
   border-color: #FF9800;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
   font-weight: 700;
 }
@@ -105,7 +120,7 @@ fieldset[disabled] .btn-primary.active {
   color: white;
   background-color: #2196F3;
   border-color: #2196F3;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
   font-weight: 700;
 }
@@ -149,7 +164,7 @@ fieldset[disabled] .btn-secondary.active {
   color: white;
   background-color: #009688;
   border-color: #009688;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
   font-weight: 700;
 }
@@ -193,7 +208,7 @@ fieldset[disabled] .btn-tertiary.active {
   color: white;
   background-color: #FF9800;
   border-color: #FF9800;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
   font-weight: 700;
   border-radius: 3px;
@@ -236,61 +251,145 @@ fieldset[disabled] .btn-xl.active {
   color: #FF9800;
   background-color: white;
 }
-.navbar-custom {
+#topNav.navbar-custom {
+  min-height: 25px;
   background-color: #222222;
   border-color: transparent;
   text-shadow: 1px 2px 7px rgba(0, 0, 0, 0.5);
-  font-family: 'Montserrat', sans-serif;
-  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
 }
-.navbar-custom .navbar-brand {
-  font-size: 1.5em;
-  color: #FF9800;
+#topNav.navbar-custom .navbar-brand {
+  height: 25px;
+  padding: 2.5px 15px;
+  color: #FFFFFF;
   font-weight: 700;
 }
-.navbar-custom .navbar-brand:hover,
-.navbar-custom .navbar-brand:focus,
-.navbar-custom .navbar-brand:active,
-.navbar-custom .navbar-brand.active {
-  color: #cc7a00;
+#topNav.navbar-custom .navbar-brand:hover,
+#topNav.navbar-custom .navbar-brand:focus,
+#topNav.navbar-custom .navbar-brand:active,
+#topNav.navbar-custom .navbar-brand.active {
+  color: #222222;
 }
-.navbar-custom .navbar-collapse {
+#topNav.navbar-custom .navbar-collapse {
   border-color: rgba(255, 255, 255, 0.02);
 }
-.navbar-custom .navbar-toggle {
+#topNav.navbar-custom .navbar-toggle {
   background-color: #FF9800;
   border-color: #FF9800;
   color: white;
   font-size: 12px;
 }
-.navbar-custom .navbar-toggle:hover,
-.navbar-custom .navbar-toggle:focus {
+#topNav.navbar-custom .navbar-toggle:hover,
+#topNav.navbar-custom .navbar-toggle:focus {
   background-color: #FF9800;
 }
-.navbar-custom .nav li a {
-  font-family: 'Montserrat', sans-serif;
-  text-transform: uppercase;
+#topNav.navbar-custom .nav li a {
+  padding-top: 2.5px;
+  padding-bottom: 2.5px;
   font-weight: 400;
   letter-spacing: 1px;
   color: white;
 }
-.navbar-custom .nav li a:hover,
-.navbar-custom .nav li a:focus {
-  color: #FF9800;
+#topNav.navbar-custom .nav li a:hover,
+#topNav.navbar-custom .nav li a:focus {
+  color: #222222;
   outline: none;
 }
-.navbar-custom .navbar-nav > .active > a {
+#topNav.navbar-custom .navbar-nav > .active > a {
   border-radius: 0;
   color: white;
-  background-color: #FF9800;
+  background-color: #222222;
 }
-.navbar-custom .navbar-nav > .active > a:hover,
-.navbar-custom .navbar-nav > .active > a:focus {
+#topNav.navbar-custom .navbar-nav > .active > a:hover,
+#topNav.navbar-custom .navbar-nav > .active > a:focus {
   color: white;
   background-color: #cc7a00;
 }
 @media (min-width: 768px) {
-  .navbar-custom {
+  #topNav.navbar-custom {
+    background-color: transparent;
+    padding: 10px 0;
+    -webkit-transition: padding 0.3s;
+    -moz-transition: padding 0.3s;
+    transition: padding 0.3s;
+    border: none;
+  }
+  #topNav.navbar-custom .navbar-brand {
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  #topNav.navbar-custom .navbar-nav > .active > a {
+    border-radius: 0;
+  }
+}
+@media (min-width: 768px) {
+  #topNav.navbar-custom.affix {
+    background-color: #FF9800;
+    padding: 0 0;
+  }
+}
+#mainNav.navbar-custom {
+  top: 25px;
+  background-color: #222222;
+  border-color: transparent;
+  text-shadow: 1px 2px 7px rgba(0, 0, 0, 0.5);
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+}
+#mainNav.navbar-custom .navbar-brand {
+  font-size: 20px;
+  color: #FF9800;
+  font-weight: 700;
+}
+#mainNav.navbar-custom .navbar-brand:hover,
+#mainNav.navbar-custom .navbar-brand:focus,
+#mainNav.navbar-custom .navbar-brand:active,
+#mainNav.navbar-custom .navbar-brand.active {
+  color: #cc7a00;
+}
+#mainNav.navbar-custom .navbar-collapse {
+  border-color: rgba(255, 255, 255, 0.02);
+}
+#mainNav.navbar-custom .navbar-toggle {
+  background-color: #FF9800;
+  border-color: #FF9800;
+  color: white;
+  font-size: 12px;
+}
+#mainNav.navbar-custom .navbar-toggle:hover,
+#mainNav.navbar-custom .navbar-toggle:focus {
+  background-color: #FF9800;
+}
+#mainNav.navbar-custom .nav li a {
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 1px;
+  color: white;
+}
+#mainNav.navbar-custom .nav li a:hover,
+#mainNav.navbar-custom .nav li a:focus {
+  color: #FF9800;
+  outline: none;
+}
+#mainNav.navbar-custom .nav li a.submenu {
+  font-weight: 300;
+  font-size: 14px;
+}
+#mainNav.navbar-custom .navbar-nav > .active > a {
+  border-radius: 0;
+  color: white;
+  background-color: #FF9800;
+}
+#mainNav.navbar-custom .navbar-nav > .active > a:hover,
+#mainNav.navbar-custom .navbar-nav > .active > a:focus {
+  color: white;
+  background-color: #cc7a00;
+}
+@media (min-width: 768px) {
+  #mainNav.navbar-custom {
     background-color: transparent;
     padding: 25px 0;
     -webkit-transition: padding 0.3s;
@@ -298,17 +397,17 @@ fieldset[disabled] .btn-xl.active {
     transition: padding 0.3s;
     border: none;
   }
-  .navbar-custom .navbar-brand {
+  #mainNav.navbar-custom .navbar-brand {
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     transition: all 0.3s;
   }
-  .navbar-custom .navbar-nav > .active > a {
+  #mainNav.navbar-custom .navbar-nav > .active > a {
     border-radius: 0;
   }
 }
 @media (min-width: 768px) {
-  .navbar-custom.affix {
+  #mainNav.navbar-custom.affix {
     background-color: #222222;
     padding: 0 0;
   }
@@ -338,7 +437,7 @@ fieldset[disabled] .btn-xl.active {
   margin-bottom: 25px;
 }
 #header .intro-text .intro-heading {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
   font-weight: 700;
   font-size: 50px;
@@ -358,7 +457,7 @@ fieldset[disabled] .btn-xl.active {
     margin-bottom: 25px;
   }
   #header .intro-text .intro-heading {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
     text-transform: uppercase;
     font-weight: 700;
     font-size: 75px;
@@ -530,27 +629,27 @@ section#contact .form-control:focus {
   box-shadow: none;
 }
 section#contact ::-webkit-input-placeholder {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
   font-weight: 700;
   color: #eeeeee;
 }
 section#contact :-moz-placeholder {
   /* Firefox 18- */
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
   font-weight: 700;
   color: #eeeeee;
 }
 section#contact ::-moz-placeholder {
   /* Firefox 19+ */
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
   font-weight: 700;
   color: #eeeeee;
 }
 section#contact :-ms-input-placeholder {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
   font-weight: 700;
   color: #eeeeee;
@@ -564,14 +663,14 @@ section#contact .text-danger {
 }
 #social span.copyright {
   line-height: 40px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
   text-transform: none;
 }
 #social ul.quicklinks {
   margin-bottom: 0;
   line-height: 40px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
   text-transform: none;
 }

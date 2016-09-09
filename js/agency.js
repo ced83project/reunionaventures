@@ -23,6 +23,12 @@
             $('.navbar-toggle:visible').click();
     });
 
+    // Offset for Top Navigation
+    $('#topNav').affix({
+        offset: {
+            top: 100
+        }
+    })
     // Offset for Main Navigation
     $('#mainNav').affix({
         offset: {

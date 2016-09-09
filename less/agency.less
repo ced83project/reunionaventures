@@ -1,3 +1,4 @@
+@import "variables-bootstrap.less";
 @import "variables.less";
 @import "mixins.less";
 
@@ -52,9 +53,25 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
 }
 
+.black {
+    font-weight: 900;
+}
+.bold {
+    font-weight: 700;
+}
+.medium {
+    font-weight: 400;
+}
+.regular {
+    font-weight: 400;
+}
 .light {
+    font-weight: 300;
+}
+.thin {
     font-weight: 100;
 }
+
 
 .img-centered {
     margin: 0 auto;
@@ -97,15 +114,107 @@ h1, h2, h3, h4, h5, h6 {
     padding: 20px 40px;
 }
 
-// Custom Navigation Bar
+// Navigation Bar
 
-.navbar-custom {
+// MainBar
+#topNav.navbar-custom {
+    min-height: @top-navbar-height; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
     background-color: @gray-darker;
     border-color: transparent;
     text-shadow: 1px 2px 7px rgba(0,0,0, 0.5);
+    .body-font;
+    .navbar-brand {
+        height: @top-navbar-height;
+        padding: @top-navbar-padding-vertical @top-navbar-padding-horizontal;
+        color: @white;
+        font-weight: 700;
+        &:hover,
+        &:focus,
+        &:active,
+        &.active {
+          //text-shadow: none;
+          color: @gray-darker;
+        }
+    }
+    .navbar-collapse {
+        border-color: fade(white, 2%);
+    }
+    .navbar-toggle {
+        background-color: @theme-primary;
+        border-color: @theme-primary;
+        color: white;
+        font-size: 12px;
+        &:hover,
+        &:focus {
+            background-color: @theme-primary;
+        }
+    }
+    .nav {
+        li {
+            a {
+                padding-top: @top-navbar-padding-menu;
+                padding-bottom: @top-navbar-padding-menu;
+                font-weight: 400;
+                letter-spacing: 1px;
+                color: white;
+                &:hover,
+                &:focus {
+                    //text-shadow: none;
+                    color: @gray-darker;
+                    outline: none;
+                }
+            }
+        }
+    }
+    .navbar-nav>.active>a {
+        border-radius: 0;
+        color: white;
+        background-color: @gray-darker;
+    }
+    .navbar-nav>.active>a:hover,
+    .navbar-nav>.active>a:focus {
+        color: white;
+        background-color: darken(@theme-primary, 10%);
+    }
+}
+
+@media(min-width:768px) {
+  #topNav.navbar-custom {
+      background-color: transparent;
+      padding: 10px 0;
+      -webkit-transition: padding 0.3s;
+      -moz-transition: padding 0.3s;
+      transition: padding 0.3s;
+      border: none;
+      .navbar-brand {
+          -webkit-transition: all 0.3s;
+          -moz-transition: all 0.3s;
+          transition: all 0.3s;
+      }
+      .navbar-nav>.active>a {
+          border-radius: 0;
+      }
+  }
+}
+
+// Navbar Change on Scroll
+@media(min-width:768px) {
+  #topNav.navbar-custom.affix {
+      background-color: @theme-primary;
+      padding: 0 0;
+  }
+}
+
+// MainBar
+#mainNav.navbar-custom {
+    top: @top-navbar-height;
+    background-color: @gray-darker;
+    border-color: transparent;
+    text-shadow: 1px 2px 7px rgba(0,0,0, 0.5);
+        
     .heading-font;
     .navbar-brand {
-        font-size: 1.5em;
+        font-size: 20px;
         color: @theme-primary;
         font-weight: 700;
         &:hover,
@@ -132,7 +241,8 @@ h1, h2, h3, h4, h5, h6 {
         li {
             a {
                 .heading-font;
-                font-weight: 400;
+                font-weight: 700;
+                font-size: 20px;
                 letter-spacing: 1px;
                 color: white;
                 &:hover,
@@ -140,6 +250,11 @@ h1, h2, h3, h4, h5, h6 {
                     color: @theme-primary;
                     outline: none;
                 }
+            }
+            a.submenu {
+              font-weight: 300;
+              font-size: 14px;
+                              
             }
         }
     }
@@ -153,35 +268,37 @@ h1, h2, h3, h4, h5, h6 {
         color: white;
         background-color: darken(@theme-primary, 10%);
     }
+    
 }
 
 @media(min-width:768px) {
-    .navbar-custom {
-        background-color: transparent;
-        padding: 25px 0;
-        -webkit-transition: padding 0.3s;
-        -moz-transition: padding 0.3s;
-        transition: padding 0.3s;
-        border: none;
-        .navbar-brand {
-            -webkit-transition: all 0.3s;
-            -moz-transition: all 0.3s;
-            transition: all 0.3s;
-        }
-        .navbar-nav>.active>a {
-            border-radius: 0;
-        }
-    }
+  #mainNav.navbar-custom {
+      background-color: transparent;
+      padding: 25px 0;
+      -webkit-transition: padding 0.3s;
+      -moz-transition: padding 0.3s;
+      transition: padding 0.3s;
+      border: none;
+      .navbar-brand {
+          -webkit-transition: all 0.3s;
+          -moz-transition: all 0.3s;
+          transition: all 0.3s;
+      }
+      .navbar-nav>.active>a {
+          border-radius: 0;
+      }
+  }
 }
 
 // Navbar Change on Scroll
-
 @media(min-width:768px) {
-    .navbar-custom.affix {
-        background-color: @gray-darker;
-        padding: 0 0;
-    }
+  #mainNav.navbar-custom.affix {
+      background-color: @gray-darker;
+      padding: 0 0;
+  }
 }
+
+// Header
 
 #header {
     background-image: url('../img/Ile-de-la-Reunion.jpg');
