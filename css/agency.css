@@ -1,6 +1,12 @@
 body {
+  padding-top: 50px;
   overflow-x: hidden;
   font-family: 'Roboto', sans-serif;
+}
+.container-fluid {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1280px;
 }
 .text-muted {
   color: #777777;
@@ -162,8 +168,8 @@ fieldset[disabled] .btn-secondary.active {
 }
 .btn-tertiary {
   color: white;
-  background-color: #009688;
-  border-color: #009688;
+  background-color: #222222;
+  border-color: #222222;
   font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
   font-weight: 700;
@@ -174,8 +180,8 @@ fieldset[disabled] .btn-secondary.active {
 .btn-tertiary.active,
 .open .dropdown-toggle.btn-tertiary {
   color: white;
-  background-color: #00635a;
-  border-color: #005951;
+  background-color: #090909;
+  border-color: #040404;
 }
 .btn-tertiary:active,
 .btn-tertiary.active,
@@ -197,11 +203,11 @@ fieldset[disabled] .btn-tertiary:active,
 .btn-tertiary.disabled.active,
 .btn-tertiary[disabled].active,
 fieldset[disabled] .btn-tertiary.active {
-  background-color: #009688;
-  border-color: #009688;
+  background-color: #222222;
+  border-color: #222222;
 }
 .btn-tertiary .badge {
-  color: #009688;
+  color: #222222;
   background-color: white;
 }
 .btn-xl {
@@ -251,166 +257,36 @@ fieldset[disabled] .btn-xl.active {
   color: #FF9800;
   background-color: white;
 }
-#topNav.navbar-custom {
-  min-height: 25px;
-  background-color: #222222;
-  border-color: transparent;
-  text-shadow: 1px 2px 7px rgba(0, 0, 0, 0.5);
-  font-family: 'Roboto', sans-serif;
-}
-#topNav.navbar-custom .navbar-brand {
-  height: 25px;
-  padding: 2.5px 15px;
-  color: #FFFFFF;
-  font-weight: 700;
-}
-#topNav.navbar-custom .navbar-brand:hover,
-#topNav.navbar-custom .navbar-brand:focus,
-#topNav.navbar-custom .navbar-brand:active,
-#topNav.navbar-custom .navbar-brand.active {
-  color: #222222;
-}
-#topNav.navbar-custom .navbar-collapse {
-  border-color: rgba(255, 255, 255, 0.02);
-}
-#topNav.navbar-custom .navbar-toggle {
-  background-color: #FF9800;
-  border-color: #FF9800;
-  color: white;
-  font-size: 12px;
-}
-#topNav.navbar-custom .navbar-toggle:hover,
-#topNav.navbar-custom .navbar-toggle:focus {
-  background-color: #FF9800;
-}
-#topNav.navbar-custom .nav li a {
-  padding-top: 2.5px;
-  padding-bottom: 2.5px;
-  font-weight: 400;
-  letter-spacing: 1px;
-  color: white;
-}
-#topNav.navbar-custom .nav li a:hover,
-#topNav.navbar-custom .nav li a:focus {
-  color: #222222;
-  outline: none;
-}
-#topNav.navbar-custom .navbar-nav > .active > a {
-  border-radius: 0;
-  color: white;
-  background-color: #222222;
-}
-#topNav.navbar-custom .navbar-nav > .active > a:hover,
-#topNav.navbar-custom .navbar-nav > .active > a:focus {
-  color: white;
-  background-color: #cc7a00;
-}
-@media (min-width: 768px) {
-  #topNav.navbar-custom {
-    background-color: transparent;
-    padding: 10px 0;
-    -webkit-transition: padding 0.3s;
-    -moz-transition: padding 0.3s;
-    transition: padding 0.3s;
-    border: none;
-  }
-  #topNav.navbar-custom .navbar-brand {
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
-  }
-  #topNav.navbar-custom .navbar-nav > .active > a {
-    border-radius: 0;
-  }
-}
-@media (min-width: 768px) {
-  #topNav.navbar-custom.affix {
-    background-color: #FF9800;
-    padding: 0 0;
-  }
-}
-#mainNav.navbar-custom {
-  top: 25px;
-  background-color: #222222;
-  border-color: transparent;
-  text-shadow: 1px 2px 7px rgba(0, 0, 0, 0.5);
+.navbar {
   font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
 }
-#mainNav.navbar-custom .navbar-brand {
-  font-size: 20px;
-  color: #FF9800;
-  font-weight: 700;
-}
-#mainNav.navbar-custom .navbar-brand:hover,
-#mainNav.navbar-custom .navbar-brand:focus,
-#mainNav.navbar-custom .navbar-brand:active,
-#mainNav.navbar-custom .navbar-brand.active {
-  color: #cc7a00;
-}
-#mainNav.navbar-custom .navbar-collapse {
-  border-color: rgba(255, 255, 255, 0.02);
-}
-#mainNav.navbar-custom .navbar-toggle {
-  background-color: #FF9800;
-  border-color: #FF9800;
-  color: white;
-  font-size: 12px;
-}
-#mainNav.navbar-custom .navbar-toggle:hover,
-#mainNav.navbar-custom .navbar-toggle:focus {
-  background-color: #FF9800;
-}
-#mainNav.navbar-custom .nav li a {
-  font-family: 'Roboto', sans-serif;
-  text-transform: uppercase;
+.navbar-primary .navbar-brand {
   font-weight: 700;
   font-size: 20px;
-  letter-spacing: 1px;
-  color: white;
 }
-#mainNav.navbar-custom .nav li a:hover,
-#mainNav.navbar-custom .nav li a:focus {
-  color: #FF9800;
-  outline: none;
+.navbar-primary .nav li a {
+  font-weight: 700;
+  font-size: 20px;
 }
-#mainNav.navbar-custom .nav li a.submenu {
+.navbar-primary .nav li a.submenu {
   font-weight: 300;
   font-size: 14px;
 }
-#mainNav.navbar-custom .navbar-nav > .active > a {
-  border-radius: 0;
-  color: white;
-  background-color: #FF9800;
+.navbar-secondary {
+  text-transform: none;
+  min-height: 30px;
 }
-#mainNav.navbar-custom .navbar-nav > .active > a:hover,
-#mainNav.navbar-custom .navbar-nav > .active > a:focus {
-  color: white;
-  background-color: #cc7a00;
+.navbar-secondary .navbar-brand {
+  height: 30px;
+  padding: 5px 15px;
+  text-shadow: 1px 2px 7px rgba(0, 0, 0, 0.5);
+  font-weight: 500;
 }
-@media (min-width: 768px) {
-  #mainNav.navbar-custom {
-    background-color: transparent;
-    padding: 25px 0;
-    -webkit-transition: padding 0.3s;
-    -moz-transition: padding 0.3s;
-    transition: padding 0.3s;
-    border: none;
-  }
-  #mainNav.navbar-custom .navbar-brand {
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
-  }
-  #mainNav.navbar-custom .navbar-nav > .active > a {
-    border-radius: 0;
-  }
-}
-@media (min-width: 768px) {
-  #mainNav.navbar-custom.affix {
-    background-color: #222222;
-    padding: 0 0;
-  }
+.navbar-secondary .nav li a {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-weight: 500;
 }
 #header {
   background-image: url('../img/Ile-de-la-Reunion.jpg');
@@ -485,6 +361,13 @@ section h3.section-subheading {
   section {
     padding: 100px 0;
   }
+}
+#map-section {
+  padding-bottom: 0px;
+}
+#map {
+  min-height: 300px;
+  width: 100%;
 }
 .service-heading {
   margin: 15px 0;
