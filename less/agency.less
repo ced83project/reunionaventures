@@ -126,7 +126,9 @@ h1, h2, h3, h4, h5, h6 {
 // Navigation Bar
 .navbar {
   .heading-font;      
-}    
+}
+
+    
 .navbar-primary {
     .navbar-brand {
         font-weight: 700;
@@ -150,7 +152,7 @@ h1, h2, h3, h4, h5, h6 {
     min-height: @navbar-custom-height; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
     .navbar-brand {
         height: @navbar-custom-height;
-        padding: @navbar-custom-padding-vertical @top-navbar-padding-horizontal;
+        padding: @navbar-custom-padding-vertical @navbar-custom-padding-horizontal;
         text-shadow: 1px 2px 7px rgba(0,0,0, 0.5);
         font-weight: 500;
 
@@ -246,10 +248,35 @@ section {
     }
 }
 
+// Carousel
+
+/* Carousel base class */
+.carousel {
+  height: @carousel-height;
+  margin-bottom: 0;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  height: @carousel-height;
+  background-color: @gray-light;
+}
+.carousel-inner > .item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: @carousel-height;
+}
+
 // Map section
 
 #map-section {
-  padding-bottom:0px;
+  padding:0px; 
 }
 #map {
   min-height:300px;
