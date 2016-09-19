@@ -4,10 +4,12 @@
 
 // Global Components
 
+html,body{height:100%;}
+
 body {
-    padding-top: 50px;
-    overflow-x: hidden;
-    .body-font;
+  padding-top: 50px;
+  overflow-x: hidden;
+  .body-font;
 }
 
 .container-fluid {
@@ -15,8 +17,6 @@ body {
   margin-left: auto;
   max-width: 1280px;
 }
-
-
 
 .text-muted {
     color: @gray-light;
@@ -123,12 +123,13 @@ h1, h2, h3, h4, h5, h6 {
     padding: 20px 40px;
 }
 
+
 // Navigation Bar
+
 .navbar {
   .heading-font;      
 }
-
-    
+ 
 .navbar-primary {
     .navbar-brand {
         font-weight: 700;
@@ -147,7 +148,20 @@ h1, h2, h3, h4, h5, h6 {
         }
     }
 }
+
+.navbar-secondary.is-visible {
+    margin-top: 50px;
+    transition: margin-top 0.5s ease 0s;
+    -webkit-transition: margin-top 0.5s ease 0s; /* Safari */
+}
+.navbar-secondary.is-hidden {
+    margin-top: 20px;
+    transition: margin-top 0.5s ease 0s;
+    -webkit-transition: margin-top 0.5s ease 0s; /* Safari */
+}
 .navbar-secondary {
+    z-index:1029;
+    margin-top:50px;
     text-transform: none;
     min-height: @navbar-custom-height; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
     .navbar-brand {
@@ -171,56 +185,56 @@ h1, h2, h3, h4, h5, h6 {
 
 // Header
 
-#header {
-    background-image: url('../img/Ile-de-la-Reunion.jpg');
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-position: center center;
-    .background-cover;
-    text-align: center;
-    text-shadow: 1px 2px 7px rgba(0,0,0, 0.5);
-    color: white;
+.intro-text {
+    padding-bottom: 50px;
+    .intro-lead-in {
+        .serif-font;
+        font-style: italic;
+        font-size: 22px;
+        line-height: 22px;
+        margin-bottom: 25px;
+    }
+    .intro-heading {
+        .heading-font;
+        font-weight: 700;
+        font-size: 50px;
+        line-height: 50px;
+        margin-bottom: 25px;
+    }
+}
+
+@media(min-width:768px) {
     .intro-text {
-        padding-top: 100px;
-        padding-bottom: 50px;
         .intro-lead-in {
             .serif-font;
             font-style: italic;
-            font-size: 22px;
-            line-height: 22px;
+            font-size: 40px;
+            line-height: 40px;
             margin-bottom: 25px;
         }
         .intro-heading {
             .heading-font;
             font-weight: 700;
-            font-size: 50px;
-            line-height: 50px;
-            margin-bottom: 25px;
+            font-size: 75px;
+            line-height: 75px;
+            margin-bottom: 50px;
         }
     }
 }
 
-@media(min-width:768px) {
-    #header {
-        .intro-text {
-            padding-top: 300px;
-            padding-bottom: 200px;
-            .intro-lead-in {
-                .serif-font;
-                font-style: italic;
-                font-size: 40px;
-                line-height: 40px;
-                margin-bottom: 25px;
-            }
-            .intro-heading {
-                .heading-font;
-                font-weight: 700;
-                font-size: 75px;
-                line-height: 75px;
-                margin-bottom: 50px;
-            }
-        }
-    }
+// Carousel
+
+.carousel,.item,.active{height:100%;}
+.carousel-inner{height:100%;}
+
+ /* Responsive image */
+.fill {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
 }
 
 // Global Section Styles
@@ -248,36 +262,10 @@ section {
     }
 }
 
-// Carousel
 
-/* Carousel base class */
-.carousel {
-  height: @carousel-height;
-  margin-bottom: 0;
-}
-/* Since positioning the image, we need to help out the caption */
-.carousel-caption {
-  z-index: 10;
-}
-
-/* Declare heights because of positioning of img element */
-.carousel .item {
-  height: @carousel-height;
-  background-color: @gray-light;
-}
-.carousel-inner > .item > img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  height: @carousel-height;
-}
 
 // Map section
 
-#map-section {
-  padding:0px; 
-}
 #map {
   min-height:300px;
   width:100%;
@@ -363,7 +351,7 @@ section {
 }
 
 // Activites Section
-.activites {
+.activity {
     img {
         margin: 0 auto;
         border: 7px solid @gray-lighter;

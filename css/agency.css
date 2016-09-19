@@ -1,3 +1,7 @@
+html,
+body {
+  height: 100%;
+}
 body {
   padding-top: 50px;
   overflow-x: hidden;
@@ -273,7 +277,21 @@ fieldset[disabled] .btn-xl.active {
   font-weight: 300;
   font-size: 14px;
 }
+.navbar-secondary.is-visible {
+  margin-top: 50px;
+  transition: margin-top 0.5s ease 0s;
+  -webkit-transition: margin-top 0.5s ease 0s;
+  /* Safari */
+}
+.navbar-secondary.is-hidden {
+  margin-top: 20px;
+  transition: margin-top 0.5s ease 0s;
+  -webkit-transition: margin-top 0.5s ease 0s;
+  /* Safari */
+}
 .navbar-secondary {
+  z-index: 1029;
+  margin-top: 50px;
   text-transform: none;
   min-height: 30px;
 }
@@ -288,31 +306,17 @@ fieldset[disabled] .btn-xl.active {
   padding-bottom: 5px;
   font-weight: 500;
 }
-#header {
-  background-image: url('../img/Ile-de-la-Reunion.jpg');
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
-  text-align: center;
-  text-shadow: 1px 2px 7px rgba(0, 0, 0, 0.5);
-  color: white;
-}
-#header .intro-text {
-  padding-top: 100px;
+.intro-text {
   padding-bottom: 50px;
 }
-#header .intro-text .intro-lead-in {
+.intro-text .intro-lead-in {
   font-family: 'Roboto Slab', serif;
   font-style: italic;
   font-size: 22px;
   line-height: 22px;
   margin-bottom: 25px;
 }
-#header .intro-text .intro-heading {
+.intro-text .intro-heading {
   font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
   font-weight: 700;
@@ -321,18 +325,14 @@ fieldset[disabled] .btn-xl.active {
   margin-bottom: 25px;
 }
 @media (min-width: 768px) {
-  #header .intro-text {
-    padding-top: 300px;
-    padding-bottom: 200px;
-  }
-  #header .intro-text .intro-lead-in {
+  .intro-text .intro-lead-in {
     font-family: 'Roboto Slab', serif;
     font-style: italic;
     font-size: 40px;
     line-height: 40px;
     margin-bottom: 25px;
   }
-  #header .intro-text .intro-heading {
+  .intro-text .intro-heading {
     font-family: 'Roboto', sans-serif;
     text-transform: uppercase;
     font-weight: 700;
@@ -340,6 +340,23 @@ fieldset[disabled] .btn-xl.active {
     line-height: 75px;
     margin-bottom: 50px;
   }
+}
+.carousel,
+.item,
+.active {
+  height: 100%;
+}
+.carousel-inner {
+  height: 100%;
+}
+/* Responsive image */
+.fill {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
 }
 section {
   padding: 50px 0;
@@ -361,38 +378,6 @@ section h3.section-subheading {
   section {
     padding: 100px 0;
   }
-}
-.divider-primary {
-  background-color: #FF9800;
-  min-height: 10px;
-}
-.divider-secondary {
-  background-color: #2196F3;
-  min-height: 10px;
-}
-/* Carousel base class */
-.carousel {
-  height: 500px;
-  margin-bottom: 0;
-}
-/* Since positioning the image, we need to help out the caption */
-.carousel-caption {
-  z-index: 10;
-}
-/* Declare heights because of positioning of img element */
-.carousel .item {
-  height: 500px;
-  background-color: #777777;
-}
-.carousel-inner > .item > img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  height: 500px;
-}
-#map-section {
-  padding: 0px;
 }
 #map {
   min-height: 300px;
@@ -491,7 +476,7 @@ section h3.section-subheading {
     margin: 0 0 30px;
   }
 }
-.activites img {
+.activity img {
   margin: 0 auto;
   border: 7px solid #eeeeee;
 }

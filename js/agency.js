@@ -78,6 +78,27 @@ function initMap() {
         offset: 51
     });
 
+    
+    // ---------- Show Header on Scroll-Up
+    
+    // Primary navigation slide-in effect
+    var headerHeight = $('.navbar-custom').height();
+    $(window).on('scroll', { previousTop: 0 },
+    function() {
+                var currentTop = $(window).scrollTop();
+                //check if user is scrolling up
+                if (currentTop < this.previousTop) {
+                    //if scrolling up...
+                    $('.navbar-custom').addClass('is-visible');
+                    $('.navbar-custom').removeClass('is-hidden');
+                } else {
+                    //if scrolling down...
+                    $('.navbar-custom').removeClass('is-visible');
+                    $('.navbar-custom').addClass('is-hidden');
+                }
+                this.previousTop = currentTop;
+    });
+    
     $('[data-toggle="tooltip"]').tooltip();
     
 /*    // Closes the Responsive Menu on Menu Item Click
