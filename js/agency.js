@@ -1,3 +1,8 @@
+/*!
+ * Outdoor eXperience v1.0.0 
+ * Copyright 2016
+ *
+ */
 function initMap() {
 
     //var myLatLng = {lat: -21.115141, lng: 55.536384};
@@ -60,9 +65,28 @@ function initMap() {
     */
 }
                   
-(function($) {
-    "use strict"; // Start of use strict
+jQuery(document).ready(function($) {
 
+    // ---------- Parallax Effect
+    $('#header').css({'background-image': 'url(./img/Ile-de-la-Reunion.jpg'});
+    $('#header').parallax("100%", 0.3);
+    
+    //$('#header-img-1').css({'background-image': 'url(./img/Ile-de-la-Reunion.jpg'});
+    //$('#header-img-2').css({'background-image': 'url(./img/carousel/001.jpg'});
+    //$('#header-img-3').css({'background-image': 'url(./img/carousel/006.jpg'});
+    //$('#header-img-4').css({'background-image': 'url(./img/carousel/002.jpg'});
+    //$('#header-img-1').parallax("100%", 0.3);
+    //$('#header-img-2').parallax("100%", 0.3);
+    //$('#header-img-3').parallax("100%", 0.3);
+    //$('#header-img-4').parallax("100%", 0.3);
+    
+    $('#slide-img-1').css({'background-image': 'url(./img/carousel/001.jpg'});
+    $('#slide-img-2').css({'background-image': 'url(./img/carousel/006.jpg'});
+    $('#slide-img-3').css({'background-image': 'url(./img/carousel/002.jpg'});
+    //$('#slide-img-1').parallax("100%", 0.3);
+    //$('#slide-img-2').parallax("100%", 0.3);
+    //$('#slide-img-3').parallax("100%", 0.3);
+    
     // jQuery for page scrolling feature - requires jQuery Easing plugin
     $('a.page-scroll').bind('click', function(event) {
         var $anchor = $(this);
@@ -77,7 +101,9 @@ function initMap() {
         target: '.navbar-fixed-top',
         offset: 51
     });
-
+    
+    // ---------- Wow Effect
+    //new WOW().init();
     
     // ---------- Show Header on Scroll-Up
     
@@ -101,22 +127,4 @@ function initMap() {
     
     $('[data-toggle="tooltip"]').tooltip();
     
-/*    // Closes the Responsive Menu on Menu Item Click
-    $('.navbar-collapse ul li a').click(function(){ 
-            $('.navbar-toggle:visible').click();
-    });
-
-    // Offset for Top Navigation
-    $('#topNav').affix({
-        offset: {
-            top: 100
-        }
-    })
-    // Offset for Main Navigation
-    $('#mainNav').affix({
-        offset: {
-            top: 100
-        }
-    })
-*/
-})(jQuery); // End of use strict
+});
